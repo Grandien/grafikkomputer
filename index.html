@@ -2,36 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Babylon.js Scene</title>
     <style>
+        /* Make sure the canvas fills the screen */
         html, body, #renderCanvas {
-            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
             display: block;
+            background-color: #000000; /* Black background */
         }
     </style>
 </head>
 <body>
+    <!-- Canvas for Babylon -->
     <canvas id="renderCanvas"></canvas>
 
     <!-- Babylon.js CDN -->
     <script src="https://cdn.babylonjs.com/babylon.js"></script>
 
-    <!-- Your script -->
-    <script>
-        const canvas = document.getElementById("renderCanvas");
-        const engine = new BABYLON.Engine(canvas, true);
-
-        // Paste your createScene function here or load it from a separate JS file
-
-        const scene = createScene();
-
-        engine.runRenderLoop(() => {
-            scene.render();
-        });
-
-        window.addEventListener('resize', () => {
-            engine.resize();
-        });
-    </script>
+    <!-- Your custom script -->
+    <script src="script.js"></script>
 </body>
 </html>
